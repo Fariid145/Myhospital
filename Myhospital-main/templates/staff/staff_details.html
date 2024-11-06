@@ -1,0 +1,86 @@
+{% extends 'forstaff.html' %}
+{% block content %}
+    <div class="container">
+        <div class="row mt_130">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">Staff Details</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="first_name" class="">First name</label>
+                                <label class="form-control" id="first_name" type="text"
+                                >{{ staff.user_first_name }}</label>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="last_name" class="">Last Name</label>
+                                <label class="form-control" type="text" id="last_name"
+                                > {{ staff.user_last_name }}</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="phone" class="">Phone</label>
+                                <label class="form-control" type="text" id="phone"
+                                >{{ staff.phone }}</label>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="email" class="">Email</label>
+                                <label class="form-control" id="email" type="email"
+                                >{{ staff.user_email }}</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="address" class="">Address</label>
+                                <label class="form-control" id="address"
+                                       type="text">{{ staff.address }}</label>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="year_of_employment" class="">Year of employment</label>
+                                <label id="year_of_employment" type="date" class="form-control"
+                                >{{ staff.year_of_employment }}</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="job_title" class="">Job title</label>
+                                <label class="form-control" id="job_title" type="text"
+                                >{{ staff.job_title }}</label>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="level" class="">Level</label>
+                                <label class="form-control" id="level">{{ staff.level }}</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="date_of_birth" class="">Date of birth</label>
+                                <label class="form-control" type="date" id="date_of_birth"
+                                >{{ staff.date_of_birth }}</label>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="staff_number" class="">Staff Number</label>
+                                <label class="form-control disabled" id="staff_number"
+                                >{{ staff.staff_number }}</label>
+                            </div>
+                        </div>
+                        <div class="from-group">
+                            <label for="staff_id" class="form-check-label">Staff ID</label>
+                            <label class="form-control" id="staff_id">{{ staff.staff_id }}</label>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="float-right">
+                            <a class="btn btn-success" href="{% url 'list_staff' %}">Back</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
